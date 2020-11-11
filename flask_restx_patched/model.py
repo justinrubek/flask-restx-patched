@@ -9,7 +9,7 @@ except ImportError:
 import flask_marshmallow
 from werkzeug import cached_property
 
-from flask_restplus.model import Model as OriginalModel
+from flask_restx.model import Model as OriginalModel
 
 
 class SchemaMixin(object):

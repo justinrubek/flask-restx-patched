@@ -1,6 +1,6 @@
 __version__ = '0.1.10'
 
-from flask_restplus import *
+from flask_restx import *
 from .api import Api
 from .model import Schema, DefaultHTTPErrorSchema
 from .namespace import Namespace

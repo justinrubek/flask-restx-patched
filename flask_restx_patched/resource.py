@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=protected-access
 import flask
-from flask_restplus import Resource as OriginalResource
+from flask_restx import Resource as OriginalResource
 from werkzeug.exceptions import HTTPException
 
 from ._http import HTTPStatus
