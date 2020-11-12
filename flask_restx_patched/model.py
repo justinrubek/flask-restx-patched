@@ -22,13 +22,13 @@ class SchemaMixin(object):
 
 class Schema(SchemaMixin, flask_marshmallow.Schema):
     def __init__(self, **kwargs):
-        super(Schema, self).__init__(strict=True, **kwargs)
+        super(Schema, self).__init__(**kwargs)
 
 
 if flask_marshmallow.has_sqla:
     class ModelSchema(SchemaMixin, flask_marshmallow.sqla.ModelSchema):
         def __init__(self, **kwargs):
-            super(ModelSchema, self).__init__(strict=True, **kwargs)
+            super(ModelSchema, self).__init__(**kwargs)
 
 
 class DefaultHTTPErrorSchema(Schema):
