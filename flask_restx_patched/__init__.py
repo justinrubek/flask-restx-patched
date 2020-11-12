@@ -1,4 +1,4 @@
-__version__ = '0.1.10'
+__version__ = '0.1.12'
 
 from flask_restx import *
 from .api import Api

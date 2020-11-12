@@ -1,6 +1,6 @@
 from flask import current_app, jsonify
 from flask_restx import Api as OriginalApi
-from werkzeug import cached_property
+from werkzeug.utils import cached_property
 
 from ._http import HTTPStatus
 from .namespace import Namespace

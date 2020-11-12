@@ -17,7 +17,7 @@ setuptools.setup(
     author_email="justin@levitytech.net",
 
     description="Forked from flask-restplus-patched. Extends flask-restx so it can handle Marshmallow schemas and Webargs arguments.",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
 
     packages=['flask_restx_patched'],
     include_package_data=True,

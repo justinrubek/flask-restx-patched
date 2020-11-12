@@ -5,7 +5,8 @@ import flask_marshmallow
 from flask_restx import Namespace as OriginalNamespace
 from flask_restx.utils import merge, unpack
 from webargs.flaskparser import parser as webargs_parser
-from werkzeug import cached_property, exceptions as http_exceptions
+from werkzeug.utils import cached_property
+from werkzeug import exceptions as http_exceptions
 
 from ._http import HTTPStatus
 from .model import Model, DefaultHTTPErrorSchema

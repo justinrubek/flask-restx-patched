@@ -7,7 +7,7 @@ except ImportError:
     from apispec.ext.marshmallow.swagger import fields2jsonschema, field2property
 
 import flask_marshmallow
-from werkzeug import cached_property
+from werkzeug.utils import cached_property
 
 from flask_restx.model import Model as OriginalModel
 
