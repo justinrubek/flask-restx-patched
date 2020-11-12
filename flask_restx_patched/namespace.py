@@ -72,21 +72,21 @@ class Namespace(OriginalNamespace):
             return self.add_model(name, api_model)
         return super(Namespace, self).model(name=name, model=model, **kwargs)
 
-    def parameters(self, parameters, locations=None):
+    def parameters(self, parameters, location=None):
         """
         Endpoint parameters registration decorator.
         """
         def decorator(func):
-            if locations is None and parameters.many:
-                _locations = ('json', )
+            if location is None and parameters.many:
+                _location = 'json'
             else:
-                _locations = locations
-            if _locations is not None:
-                parameters.context['in'] = _locations
+                _location = location
+            if _location is not None:
+                parameters.context['in'] = _location
 
             return self.doc(params=parameters)(
                 self.response(code=HTTPStatus.UNPROCESSABLE_ENTITY)(
-                    self.WEBARGS_PARSER.use_args(parameters, locations=_locations)(
+                    self.WEBARGS_PARSER.use_args(parameters, location=_location)(
                         func
                     )
                 )
